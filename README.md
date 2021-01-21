@@ -40,20 +40,19 @@ $ jupyter-lab
 ## Notes and Misc:
 
 The optimizations are *slow* - they are currently brute-force searching.
-Adding in the penalty for not enough minerals makes the objective function very slow.
-Decreasing the number of possible inputs (redcing the dimensionality of the problem) makes the process faster (smaller search space).
 
+Adding in the penalty for solutions that have too few minerals makes the objective function *very slow*.
+
+Decreasing the number of possible inputs (reducing the dimensionality of the problem) makes the process faster (smaller search space).
 I originally wanted to include all the required minerals and all the possible ores that yield only those minerals. This was just too slow.
 I see why other ore calculators have a minimum number of ores - to keep the process as fast as possible.
 
-I do not find a case where the cost of buying / refining ore is cheaper than the cost of buying the minerals directly.
-The refining yield is key to this - but if you are building at an NPC station then the refining yield is going to be terrible anyway - use a refining implant if possible.
-The ore takes less space (which matters), but the minerals are cheaper than the ores. I would like to optimize for either / both (which is why the item input_data info
-contains volume and packagedVolume) - but I did not get that far yet.
+I do not find any case where the cost of buying / refining ore is cheaper than the cost of buying the minerals directly.
 
-Next up is to look at https://pypi.org/project/pymprog/ - introduced by Ja'e and used in an unmaintained similar project that is on github.
-Some input mangling required to get things setup.
+The refining yield is very important to the cost of solutions - but if you are building at an NPC station then the refining yield is going to be terrible anyway - use a refining implant if possible.
 
-Key Takeaway: Minerals are cheaper than Ore. There is a premium on Ore because it is so much smaller than the minerals it yields.
+Next up is to look at https://pypi.org/project/pymprog/ - introduced by Ja'e and used in an unmaintained project that is on github. Some input mangling required to get things setup.
+
+Key Takeaway: Minerals are cheaper than Ore. There is a premium on Ore because it is so much more compact than the minerals it yields.
 
 
