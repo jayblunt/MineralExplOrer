@@ -21,7 +21,7 @@ $ pip install -U pip wheel setuptools
 $ pip install --prefer-binary -r requirements.txt
 ```
 
-If you get an error for a missing package, then find it's name on [pypi](https://pypi.org) and then ```pip install``` it.
+If you get an error for a missing package, then find its name on [pypi](https://pypi.org) and then ```pip install``` it.
 
 
 ## Setup your jupyter-lab environment
