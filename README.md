@@ -3,6 +3,8 @@
 
 *WORK IN PROGRESS* - this does not give useful results yet.
 
+LP.ipynb is where you want to be. Skip Optimization.ipynb.
+
 jupyter-lab notebook to explore optimization for eve ores.
 This uses a subset of T1 ship hulls and some pre-generated data for mineral requirements and ore yields and prices. 
 
