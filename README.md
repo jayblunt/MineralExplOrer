@@ -1,16 +1,16 @@
 
 # Example optimizations for Eve - How much Ore do I need
 
-*WORK IN PROGRESS* - this does not give useful results yet.
-
-LP.ipynb is where you want to be. Skip Optimization.ipynb.
-
 jupyter-lab notebook to explore optimization for eve ores.
 This uses a subset of T1 ship hulls and some pre-generated data for mineral requirements and ore yields and prices. 
 
-The pre-generated data for mineral requirements, ore yields, item info are from [Steve Ronuken](https://www.fuzzwork.co.uk/dump/).
+LP.ipynb is where you want to be.
+If you prefer javascript (node), then go directly to LP_JS.ipynb.
+
+The pre-generated data for mineral requirements, ore yields, item info, etc are from [@fuzzysteve](https://www.fuzzwork.co.uk/dump/).
+If you prefer python3, look at [@jayblunt](https://github.com/jayblunt/yamlloader).
 Prices are from [ESI](https://esi.evetech.net/latest/markets/10000002/history) (include the type_id=NNN paramter to get the history for each item).
-input_data.py has all the pre-generated data used in the notebook.
+input_data.py / input_data.json has all the pre-generated data used in the notebooks.
 
 ## Setup your python environment
 
@@ -25,6 +25,7 @@ $ pip install --prefer-binary -r requirements.txt
 
 If you get an error for a missing package, then find its name on [pypi](https://pypi.org) and then ```pip install``` it.
 
+If you are using javascript and a jupyter notebook, see the instructions [here](http://n-riesco.github.io/ijavascript/).
 
 ## Setup your jupyter-lab environment
 
@@ -32,16 +33,22 @@ If you get an error for a missing package, then find its name on [pypi](https://
 $ jupyter-lab --generate-config
 ```
 
-## Start jupyter
+## Start jupyter (python)
 
 ```shell
 $ jupyter-lab
 ```
 
+## Start jupyer (javascript)
+
+```shell
+$ ijsnotebook
+```
 
 ## Notes and Misc:
 
-The optimizations are *slow* - they are currently brute-force searching.
+The optimizations are *slow* - they are currently brute-force searches.
+Ignore them for practical purposes, but they may be interesting for learning purposes.
 
 Adding in the penalty for solutions that have too few minerals makes the objective function *very slow*.
 
@@ -53,8 +60,9 @@ I do not find any case where the cost of buying / refining ore is cheaper than t
 
 The refining yield is very important to the cost of solutions - but if you are building at an NPC station then the refining yield is going to be terrible anyway - use a refining implant if possible.
 
-Next up is to look at https://pypi.org/project/pymprog/ - introduced by Ja'e and used in an unmaintained project that is on github. Some input mangling required to get things setup.
+Next up is to look at https://pypi.org/project/pymprog/ - introduced by [Ja'e](https://zkillboard.com/character/91526862/) and used in an unmaintained project that is on github. Some input mangling required to get things setup.
 
-Key Takeaway: Minerals are cheaper than Ore. There is a premium on Ore because it is so much more compact than the minerals it yields.
+Key Takeaway: Minerals are cheaper than Ore.
+There is a premium on Compressed Ore simply because it is so much more compact than the minerals it yields.
 
 
