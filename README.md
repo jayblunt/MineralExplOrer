@@ -9,7 +9,7 @@ If you prefer javascript (node), then go directly to LP_JS.ipynb.
 
 The pre-generated data for mineral requirements, ore yields, item info, etc are from [@fuzzysteve](https://www.fuzzwork.co.uk/dump/).
 If you prefer python3, look at [@jayblunt](https://github.com/jayblunt/yamlloader).
-Prices are from [ESI](https://esi.evetech.net/latest/markets/10000002/history) (include the type_id=NNN paramter to get the history for each item).
+Prices are from [ESI](https://esi.evetech.net/latest/markets/10000002/history) (include the type_id=NNN parameter to get the history for each item).
 input_data.py / input_data.json has all the pre-generated data used in the notebooks.
 
 ## Setup your python environment
